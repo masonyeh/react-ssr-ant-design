@@ -6,7 +6,4 @@
     "stage-3",
     "react"
   ],
-  "plugins": [
-     ["import", { libraryName: "antd", style: "css" }]
-  ]
 }

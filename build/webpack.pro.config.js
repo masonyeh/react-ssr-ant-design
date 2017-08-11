@@ -41,7 +41,7 @@ clientConfig = {
             loader: 'babel',
             query: {
                 presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['transform-runtime', 'add-module-exports'],
+                plugins: ['transform-runtime', 'add-module-exports', ['import', {libraryName: 'antd', style: 'css'}]],
                 cacheDirectory: true
             }
         }, {
@@ -108,7 +108,7 @@ serverConfig = {
             loader: 'babel',
             query: {
                 presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['add-module-exports'],
+                plugins: ['add-module-exports', ['import', {libraryName: 'antd'}]],
                 cacheDirectory: true
             }
         }, {
