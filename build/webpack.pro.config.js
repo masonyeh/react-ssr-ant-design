@@ -41,7 +41,7 @@ clientConfig = {
             loader: 'babel',
             query: {
                 presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['transform-runtime', 'add-module-exports', ['import', {libraryName: 'antd', style: 'css'}]],
+                plugins: [['transform-runtime', {polyfill: false}], 'add-module-exports', ['import', {libraryName: 'antd', style: 'css'}]],
                 cacheDirectory: true
             }
         }, {
