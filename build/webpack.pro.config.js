@@ -36,7 +36,7 @@ clientConfig = {
     },
     module: {
         loaders: [{
-            test: /\.js$/,
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel',
             query: {
@@ -54,8 +54,8 @@ clientConfig = {
             loader: 'url?limit=8000'
         },
         {
-            test:/\.css$/,
-            loader:'style!css'
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract("style-loader", "css-loader")
         },
         {
             test: /\.json$/,
@@ -71,9 +71,10 @@ clientConfig = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor', 'manifest'],
+            names: ['vendor'],
             filename: '[name].[chunkhash:8].js'
         }),
+        new ExtractTextPlugin("[name].css"),
         new webpack.optimize.UglifyJsPlugin({
             compress: {warnings: false},
             comments: false
@@ -103,13 +104,12 @@ serverConfig = {
     },
     module: {
         loaders: [{
-            test: /\.js$/,
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel',
             query: {
-                presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['add-module-exports', ['import', {libraryName: 'antd'}]],
-                cacheDirectory: true
+              presets: ['es2015', 'react', 'stage-0'],
+              plugins: [['transform-runtime', {polyfill: false}], 'add-module-exports'],
             }
         }, {
             test: /\.scss$/,
@@ -120,7 +120,7 @@ serverConfig = {
         },
         {
             test:/\.css$/,
-            loader:'style!css'
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader")
         },
         {test: /\.less$/,loader: 'style!css!less'},
         {
@@ -136,6 +136,7 @@ serverConfig = {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
+        new ExtractTextPlugin("[name].css"),
         new webpack.optimize.UglifyJsPlugin({
             compress: {warnings: false},
             comments: false

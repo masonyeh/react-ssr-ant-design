@@ -13,9 +13,9 @@
         "pm2": "pm2 monit"
     },
     "dependencies": {
-        "antd": "^2.12.2",
-        "antd-mobile": "^1.5.0",
+        "antd": "^3.4.2",
         "ejs": "^2.5.5",
+        "isomorphic-webpack": "^2.1.1",
         "koa": "^2.0.0",
         "koa-bodyparser": "^3.2.0",
         "koa-compose": "^3.2.0",
