@@ -36,25 +36,23 @@
 
 ### 命令      
 
-### 安装步骤    
-    根目录下 运行 npm install 安装依赖包
+### 使用步骤
+    git clone https://github.com/masonyeh/react-ssr-ant-design.git
+    cd ./react-ssr-ant-design 
+    npm install
+    npm run dev
 
 #### SSR编译        
-    * npm run kill            ssr-杀掉8000端口      
-    * npm run dev         ssr-开发环境状态        
-    * npm run build       ssr-部署环境编译        
-    * npm run clean       ssr-清除部署环境已编译文件  
+    * npm run kill        杀掉8000端口      
+    * npm run dev         开发环境状态        
+    * npm run build       部署环境编译        
+    * npm run clean       清除部署环境已编译文件  
     * npm run lint -- ./path/xx.js  eslint 检测某个文件
     * npm run lint -- ./path/xx.js  --fix 修复代码非规范模块
-    * npm run start       ssr-部署环境启动状态  
-    * npm run pm2-start   ssr-PM2启动node服务  
-    * npm run pm2         ssr-PM2监控  
+    * npm run start       部署环境启动状态  
+    * npm run pm2-start   PM2启动node服务  
+    * npm run pm2         PM2监控  
 
-###Gulp
-    * gulp      默认执行gulp dev；
-    * gulp dev  开发模式下，支持HRM、代理http,https获取联调数据等操作；
-    * gulp mock mock模式下，可代理读取swagger mock数据等;
-    * gulp pro  pro模式下编译新版本上线;
 
     运行中时，按ctrl+c 退出服务，端口关闭；
               ctrl+x 退出服务，端口不关闭；
