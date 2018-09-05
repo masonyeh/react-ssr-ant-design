@@ -1,4 +1,5 @@
 # React SSR Ant Design
+  一个基于React、Node.js基础框架，支持SSR渲染 同构、Redux、Router等功能,使用第三方组件包 Ant Design;
 
 ### 使用技术
     1.React UI框架
@@ -12,6 +13,7 @@
     9.Eslint 代码检测
     10.开发环境Hot加载
     11.pm2兼容
+    12.Ant Design组件包
 
 
 ### 环境版本
