@@ -2,33 +2,33 @@
   一个基于React、Node.js基础框架，支持SSR渲染 同构、Redux、Router等功能,使用第三方组件包 Ant Design;
 
 ### 使用技术
-    1.React UI框架
-    2.react-router路由控制
-    3.SSR 服务端渲染
-    4.Redux 跨页面数据传输共享
-    5.Node.js Koa
-    6.Sass 预编译
-    7.npm
-    8.webpack
-    9.Eslint 代码检测
-    10.开发环境Hot加载
-    11.pm2兼容
-    12.Ant Design组件包
+    1.React^15.3.1      UI框架
+    2.react-router^3.0  路由控制
+    3.SSR               服务端渲染
+    4.Redux^3.6         跨页面数据传输共享
+    5.Node.js Koa^2.0   Server
+    6.Sass4.1.1         预编译
+    7.npm               依赖包管理
+    8.Webpack^1.13.1    打包工具
+    9.Eslint^3.19.0     代码检测
+    10.开发环境Hot加载    Webpack-Hot-Middleware
+    11.PM2^2.2.2        兼容
+    12.Ant Design^3.4.2 组件包
 
 
 ### 环境版本
     1.npm@5.3.0
-    2.node@v8.6.0
+    2.Node@v8.6.0
 
 ### 代码规范
-    jsx代码规范，查看根目录下“jsx.md”
-    css代码规范，查看根目录下“css.md”
-    * 注意：只编写部分，规范随时迭代开发、code review再做相应的调整。
+    JSX代码规范，查看根目录下“jsx.md”
+    CSS代码规范，查看根目录下“css.md”
+    * 注意：只编写部分，规范随时迭代开发、Code Review再做相应的调整。
 
 ### 要点  
     1.服务端渲染 Redux state共享，同构。
-    2.fetch 使用 isomorphic-fetch 同构fetch。
-    3.webpack
+    2.Fetch 使用 isomorphic-fetch 同构Fetch。
+    3.Webpack
         (1).按需加载
         (2).依赖包依赖引用绑定
         (3).postcss
@@ -47,7 +47,7 @@
     * npm run dev         开发环境状态        
     * npm run build       部署环境编译        
     * npm run clean       清除部署环境已编译文件  
-    * npm run lint -- ./path/xx.js  eslint 检测某个文件
+    * npm run lint -- ./path/xx.js  Eslint 检测某个文件
     * npm run lint -- ./path/xx.js  --fix 修复代码非规范模块
     * npm run start       部署环境启动状态  
     * npm run pm2-start   PM2启动node服务  
